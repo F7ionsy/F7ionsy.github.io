@@ -70,7 +70,7 @@ jQuery(document).ready(function($){
 	}; 
    var Annie_Random = function() {
 		//generate a random img that pre_name 'from 0 to 110'
-		var random_bg = Math.floor(Math.random() * 110 + 1);
+		var random_bg = Math.floor(Math.random() * 116 + 1);
 		//var bg = 'url(/img/random/' + random_bg + '.jpg)';
 		var bg = 'url(/img/random/' + random_bg + '.jpg)';
 		$("header").css("background-image", bg);
