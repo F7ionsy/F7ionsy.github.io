@@ -93,8 +93,8 @@
   
   @media (max-width: 890px) {
   	#local-search-input {
-  		width: 100%;
-  		margin-left: 0;
+  		width: 90%;
+  		margin-left: 5%;
   		margin-top: 15px;
   		padding: 10px;
   		border: none;
@@ -103,8 +103,8 @@
   		background-color: initial;
   	}
   	#local-search-result {
-  		width: 100%;
-  		margin-left: 0;
+  		width: 90%;
+  		margin-left: 5%;
   		margin-top: 15px;
   		border: none;
   		outline: none;
@@ -134,4 +134,8 @@
   		line-height: 50px;
   		text-align: center;
   	}
+  	#no-result {
+  		color: #ccc;
+  		font-size: 10px;
+ 	 }
   }

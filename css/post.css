@@ -6,6 +6,7 @@
 	margin: 3rem 0;
 }
 
+
 /* Post content style */
 
 .content {
@@ -14,8 +15,9 @@
 	line-height: inherit;
 	color: #232323;
 	/*
-	font-family: Lato,-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Heiti SC",STHeiti,"Source Han Sans SC","Noto Sans CJK SC","WenQuanYi Micro Hei","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+		font-family: Lato,-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Heiti SC",STHeiti,"Source Han Sans SC","Noto Sans CJK SC","WenQuanYi Micro Hei","Droid Sans Fallback","Microsoft YaHei",sans-serif;
 	*/
+	font-family: "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
 }
 
 .content h1 {
@@ -132,12 +134,24 @@ b {
 
 .content code,
 .content pre {
-	font-family: "Source Code Pro", monospace;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 
 .content code {
 	background: rgba(99, 99, 99, 0.07);
-	color: #ef459c;
 	padding: 1px 2px;
 	border-radius: 2px;
 }

@@ -1,7 +1,13 @@
-<!--There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!-->
-<!DOCTYPE html>
-<html>
-	
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+
+	<!DOCTYPE html>
+	<html>
+		
 
 <head>
 	<title>ShadowsocksR安装教程</title>
@@ -13,45 +19,89 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
    	<!-- css -->
-	<link rel="stylesheet" href="/css/style.css">		
+	<link rel="stylesheet" href="/css/style.css">
+
 	<!-- favicon -->
 	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
+	
 	<!-- font-awesome -->
 	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-
-
-
-<body>	
-	<!--Preloader-->
+	<body>	
+		<!--Preloader-->
 <div id="preloader">
 	<div id="status">
-		<img alt="preloader" src="/img/logo.png">
+		<img alt="PRELOADER" src="/img/logo.png">
 	</div>
 </div>
 <!--Preloader end-->
 
+<!-- header -->
 
-	<header style="background-image: url( /img/random/0.jpg );">	
+	<header id="header-bg-1" style="background-image: url( /img/random/0.jpg );">	
 
 	
 		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
 	
-		
+	
+	<!-- motto or description -->
 		
  		<p class="motto"></p>
 	
 	
+	<!-- current page name or title -->
 	
-		
-			<p class="page-name">ShadowsocksR安装教程</p>
-		
-		
 	
+	<!-- others: such as change-bg, time... -->
+	<p class="page-name-other">
+		9/29/2018 
+		<style type="text/css">
+	header:after {
+		content: '';
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #222222;
+		opacity: .5;
+		z-index: -1;
+	}
+	
+	.change-header-bg{
+		font-style: normal;
+	}
+	.change-header-bg i{
+		text-align: center;
+		cursor: pointer;
+		pointer-events: bounding-box;
+	}
+	@media(max-width:512px) {
+		.change-header-bg {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+</style>
+
+<script type="text/javascript">
+	function changeHeaderBg(){
+		var random_bg = Math.floor(Math.random() * 109 + 1);
+		var bg = 'url(' + random_bg + '.jpg)';
+		$("#header-bg-2").css("background-image", bg);
+	}
+</script>
+
+<span class="change-header-bg">
+	——&nbsp;<i  class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
+</span>
+	</p>		
 </header>
 
+<!-- nav -->
 <div id="cd-nav">
-	<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+	<a href="#0" title="menu" class="cd-nav-trigger"><span></span></a>
 
 	<nav id="cd-main-nav">
 		<ul>
@@ -82,20 +132,21 @@
     		
     		
         	
-            	<li><a href="javascript:;" class="popup-trigger" title="Search">搜索</a></li>
+            	<li class="fa fa-/search"><a href="javascript:;" class="popup-trigger" title="Search">搜索</a></li>
         	
 		</ul>
 	</nav>
 </div>
 
-
-	<main>
-	<div class="page-container">
-	<!-- content srart -->
+		<!--main-->
+		<main> 
+		<div class="page-container">
+		<!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
 	<div class="am-u-md-8 am-u-sm-12">
 
 		<article class="am-article blog-article-p">
+
 			<div class="am-article-hd">
 				
 
@@ -109,8 +160,6 @@
 		</a>
 	
 
-
-
 				</h1>
 
 				<p class="am-article-meta blog-text-center">
@@ -121,22 +170,24 @@
   		2018-09-01
   </time>
 </a>    
-&nbsp
+&nbsp;
 					</span>
+					
 					<span>						
 						
 							<i class="fa fa-tags"></i>
 							
-								<a href="#SSR 技术" title="SSR 技术" rel="1">SSR 技术</a>&nbsp
+								<a href="#SSR" title="SSR" rel="1">SSR</a>&nbsp;
 													 											
 						
-					</span>	
+					</span>
 				</p>
-			</div>	
+			</div>
 
 			<div class="am-article-bd">
-				<div class="content">
-					<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><p>本脚本需要Linux root账户权限才能正常安装运行，所以如果不是 root账号，请先切换为root，如果是 root账号，那么请跳过！<br><code>sudo su</code><br>输入上面代码回车后会提示你输入当前用户的密码，输入并回车后，没有报错就继续下面的步骤安装ShadowsocksR。<br><strong>下载地址：</strong><br><code>wget -N --no-check-certificate https://softs.loan/Bash/ssrmu.sh &amp;&amp; chmod +x ssrmu.sh &amp;&amp; bash ssrmu.sh</code><br><strong>备用下载地址（上面的链接无法下载，就用这个）：</strong><br><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh &amp;&amp; chmod +x ssrmu.sh &amp;&amp; bash ssrmu.sh</code><br>下载运行后会提示你输入数字来选择要做什么。</p>
+				<div class="content" id="post-content">
+					
+						<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><p>本脚本需要Linux root账户权限才能正常安装运行，所以如果不是 root账号，请先切换为root，如果是 root账号，那么请跳过！<br><code>sudo su</code><br>输入上面代码回车后会提示你输入当前用户的密码，输入并回车后，没有报错就继续下面的步骤安装ShadowsocksR。<br><strong>下载地址：</strong><br><code>wget -N --no-check-certificate https://softs.loan/Bash/ssrmu.sh &amp;&amp; chmod +x ssrmu.sh &amp;&amp; bash ssrmu.sh</code><br><strong>备用下载地址（上面的链接无法下载，就用这个）：</strong><br><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh &amp;&amp; chmod +x ssrmu.sh &amp;&amp; bash ssrmu.sh</code><br>下载运行后会提示你输入数字来选择要做什么。</p>
 <p>输入 <strong>1</strong> ，就会开始安装ShadowsocksR服务端，并且会提示你输入Shadowsocks的 <strong>端口/密码/加密方式/ 协议/混淆（混淆和协议是通过输入数字选择的）</strong> 等参数来添加第一个用户。<br><strong>注意：用户名不支持中文，如果输入中文会一直保存下去！</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line">请输入要设置的用户 用户名(请勿重复, 用于区分, 不支持中文, 会报错 !)</span><br><span class="line">(默认: doubi):doubi</span><br><span class="line"> </span><br><span class="line">——————————————————————————————</span><br><span class="line">	用户名 : doubi</span><br><span class="line">——————————————————————————————</span><br><span class="line"> </span><br><span class="line">请输入要设置的用户 端口(请勿重复, 用于区分)</span><br><span class="line">(默认: 2333):2333</span><br><span class="line"> </span><br><span class="line">——————————————————————————————</span><br><span class="line">	端口 : 2333</span><br><span class="line">——————————————————————————————</span><br><span class="line"> </span><br><span class="line">请输入要设置的用户 密码</span><br><span class="line">(默认: doub.io):doub.io</span><br><span class="line"> </span><br><span class="line">——————————————————————————————</span><br><span class="line">	密码 : doub.io</span><br><span class="line">——————————————————————————————</span><br><span class="line"> </span><br><span class="line">请选择要设置的用户 加密方式</span><br><span class="line">  1. none</span><br><span class="line"> [注意] 如果使用 auth_chain_* 系列协议，建议加密方式选择 none (该系列协议自带 RC4 加密)，混淆随意</span><br><span class="line"> </span><br><span class="line">  2. rc4</span><br><span class="line">  3. rc4-md5</span><br><span class="line">  4. rc4-md5-6</span><br><span class="line"> </span><br><span class="line">  5. aes-128-ctr</span><br><span class="line">  6. aes-192-ctr</span><br><span class="line">  7. aes-256-ctr</span><br><span class="line"> </span><br><span class="line">  8. aes-128-cfb</span><br><span class="line">  9. aes-192-cfb</span><br><span class="line"> 10. aes-256-cfb</span><br><span class="line"> </span><br><span class="line"> 11. aes-128-cfb8</span><br><span class="line"> 12. aes-192-cfb8</span><br><span class="line"> 13. aes-256-cfb8</span><br><span class="line"> </span><br><span class="line"> 14. salsa20</span><br><span class="line"> 15. chacha20</span><br><span class="line"> 16. chacha20-ietf</span><br><span class="line"> [注意] salsa20/chacha20-*系列加密方式，需要额外安装依赖 libsodium ，否则会无法启动ShadowsocksR !</span><br><span class="line"> </span><br><span class="line">(默认: 5. aes-128-ctr):5</span><br><span class="line"> </span><br><span class="line">——————————————————————————————</span><br><span class="line">	加密 : aes-128-ctr</span><br><span class="line">——————————————————————————————</span><br><span class="line"> </span><br><span class="line">请选择要设置的用户 协议插件</span><br><span class="line"> 1. origin</span><br><span class="line"> 2. auth_sha1_v4</span><br><span class="line"> 3. auth_aes128_md5</span><br><span class="line"> 4. auth_aes128_sha1</span><br><span class="line"> 5. auth_chain_a</span><br><span class="line"> 6. auth_chain_b</span><br><span class="line"> [注意] 如果使用 auth_chain_* 系列协议，建议加密方式选择 none (该系列协议自带 RC4 加密)，混淆随意</span><br><span class="line"> </span><br><span class="line">(默认: 2. auth_sha1_v4):3</span><br><span class="line"> </span><br><span class="line">——————————————————————————————</span><br><span class="line">	协议 : auth_aes128_md5</span><br><span class="line">——————————————————————————————</span><br><span class="line"> </span><br><span class="line">请选择要设置的用户 混淆插件</span><br><span class="line"> 1. plain</span><br><span class="line"> 2. http_simple</span><br><span class="line"> 3. http_post</span><br><span class="line"> 4. random_head</span><br><span class="line"> 5. tls1.2_ticket_auth</span><br><span class="line"> [注意] 如果使用 ShadowsocksR 代理游戏，建议选择 混淆兼容原版或 plain 混淆，然后客户端选择 plain，否则会增加延迟 !</span><br><span class="line"> 另外, 如果你选择了 tls1.2_ticket_auth，那么客户端可以选择 tls1.2_ticket_fastauth，这样即能伪装特征 又不会增加延迟 !</span><br><span class="line"> </span><br><span class="line">(默认: 5. tls1.2_ticket_auth):5</span><br><span class="line"> </span><br><span class="line">——————————————————————————————</span><br><span class="line">	混淆 : tls1.2_ticket_auth</span><br><span class="line">——————————————————————————————</span><br><span class="line"> </span><br><span class="line">是否设置 混淆插件兼容原版(_compatible)？[Y/n]y</span><br><span class="line"> </span><br><span class="line">请输入要设置的用户 欲限制的设备数 ( auth_* 系列协议 不兼容原版才有效 )</span><br><span class="line">[注意] 设备数限制：每个端口同一时间能链接的客户端数量(多端口模式，每个端口都是独立计算)，建议最少 2个。</span><br><span class="line">(默认: 无限):5</span><br><span class="line"> </span><br><span class="line">请输入要设置的用户 单线程 限速上限(单位：KB/S)</span><br><span class="line">[注意] 单线程限速：每个端口 单线程的限速上限，多线程即无效。</span><br><span class="line">(默认: 无限):666</span><br><span class="line"> </span><br><span class="line">请输入要设置的用户 总速度 限速上限(单位：KB/S)</span><br><span class="line">[注意] 端口总限速：每个端口 总速度 限速上限，单个端口整体限速。</span><br><span class="line">(默认: 无限):2333</span><br><span class="line"> </span><br><span class="line">请输入要设置的用户 可使用的总流量上限(单位: GB, 1-838868 GB)</span><br><span class="line">(默认: 无限):1</span><br><span class="line"> </span><br><span class="line">请输入要设置的用户 禁止访问的端口</span><br><span class="line">[注意] 禁止的端口：例如不允许访问 25端口，用户就无法通过SSR代理访问 邮件端口25了，如果禁止了 80,443 那么用户将无法正常访问 http/https 网站。</span><br><span class="line">封禁单个端口格式: 25</span><br><span class="line">封禁多个端口格式: 23,465</span><br><span class="line">封禁 端口段格式: 233-266</span><br><span class="line">封禁多种格式端口: 25,465,233-666 (不带冒号:)</span><br><span class="line">(默认为空，无限制):</span><br><span class="line"> </span><br><span class="line">——————————————————————————————</span><br><span class="line">	禁止的端口 : 无限制</span><br><span class="line">——————————————————————————————</span><br></pre></td></tr></table></figure></p>
 <h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>运行脚本，<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bash ssrmu.sh</span><br><span class="line"></span><br><span class="line">还有一个 运行参数，是用于所有用户流量清零的</span><br><span class="line">bash ssrmu.sh clearall</span><br><span class="line"> 不过不需要管这个，可以通过脚本自动化的设置 crontab 定时运行脚本</span><br></pre></td></tr></table></figure></p>
 <p>输入对应的数字来执行相应的命令。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">ShadowsocksR MuJSON一键管理脚本 [vX.X.X]</span><br><span class="line">  ---- Toyo | doub.io/ss-jc60 ----</span><br><span class="line"> </span><br><span class="line">  1. 安装 ShadowsocksR</span><br><span class="line">  2. 更新 ShadowsocksR</span><br><span class="line">  3. 卸载 ShadowsocksR</span><br><span class="line">  4. 安装 libsodium(chacha20)</span><br><span class="line">————————————</span><br><span class="line">  5. 查看 账号信息</span><br><span class="line">  6. 显示 连接信息</span><br><span class="line">  7. 设置 用户配置</span><br><span class="line">  8. 手动 修改配置</span><br><span class="line">  9. 配置 流量清零</span><br><span class="line">————————————</span><br><span class="line"> 10. 启动 ShadowsocksR</span><br><span class="line"> 11. 停止 ShadowsocksR</span><br><span class="line"> 12. 重启 ShadowsocksR</span><br><span class="line"> 13. 查看 ShadowsocksR 日志</span><br><span class="line">————————————</span><br><span class="line"> 14. 其他功能</span><br><span class="line"> 15. 升级脚本</span><br><span class="line"> </span><br><span class="line"> 当前状态: 已安装 并 已启动</span><br><span class="line"> </span><br><span class="line">请输入数字 [1-15]：</span><br></pre></td></tr></table></figure></p>
@@ -168,16 +219,16 @@
 <p>所以只需要转移该文件或者或者复制内容粘贴到另一个服务器上即可（先安装SSR服务端后再覆盖mudb.json，然后重启SSR服务端）。</p>
 <p><strong>本文转载自：</strong><a href="https://doub.io/" title="逗比根据地" target="_blank" rel="noopener">逗比根据地</a></p>
 
+					
 				</div>
 			</div>
-
 		</article>
 
 		<ul class="am-pagination">
     
     	<li class="am-pagination-prev">
    		<a class="pull-left" href="/2018/09/02/Telegram代理搭建/" title="Telegram代理搭建">
-      		&laquo;上一篇 
+      		&laquo; 上一篇
 		</a>
 		</li>
 	
@@ -185,18 +236,142 @@
  </ul>
         
 
-			
-
-
-	</div> 
+		<div class="theme-annie-comment-button-container">
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">
+		加载评论
+		<!--加载评论-->
+	</button>
 </div>
 
+<div id="annie-comment-container" class="theme-annie-comment-main-container">
 
+	
+		
+			<!-- comment gitalk -->
+			<!-- show gitalk comment -->
+
+  <div id="gitalk-container"></div>
+
+
+<!-- gitalk`s css & js -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<link rel="stylesheet" href="/css/comment.css">
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="text/javascript">
+	//thanks O-R
+	//https://github.com/gitalk/gitalk/issues/102#issuecomment-382970552
+	//去除尾部匹配正则数组的字符串  
+	//remove redundant characters
+	String.prototype.trimEnd = function(regStr) {
+		var result = this;
+		if(regStr == undefined || regStr == null || regStr == "") {
+			return result;
+		}
+		var array = regStr.split(',');
+
+		if(array.length > 0) {
+
+			var c = array.shift();
+			var str = this;
+			var i = str.length;
+			var rg = new RegExp(c);
+			var matchArr = str.match(rg);
+
+			if(matchArr != undefined && matchArr != null && matchArr.length > 0) {
+				var matchStr = matchArr[0].replace(/\\/g, "\\\\").replace(/\*/g, "\\*")
+					.replace(/\+/g, "\\+").replace(/\|/g, "\\|")
+					.replace(/\{/g, "\\{").replace(/\}/g, "\\}")
+					.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
+					.replace(/\^/g, "\\^").replace(/\$/g, "\\$")
+					.replace(/\[/g, "\\[").replace(/\]/g, "\\]")
+					.replace(/\?/g, "\\?").replace(/\,/g, "\\,")
+					.replace(/\./g, "\\.").replace(/\&/g, "\\&");
+				matchStr = matchStr + '$';
+				result = str.replace(new RegExp(matchStr), "");
+			}
+
+			if(array.length > 0) {
+				return result.trimEnd(array.join())
+			} else {
+				return result;
+			}
+		}
+	};
+
+	//create gitalk
+	var gitalk = new Gitalk({
+		clientID: '3333.... ',
+		clientSecret: '3333.... ',
+		//id: window.location.pathname,
+		// id: (window.location.pathname).split("/").pop().substring(0, 49),
+		id: md5(location.href.trimEnd('#.*$,\\?.*$,index.html$')),
+		repo: 'annie-gitalk',
+		owner: 'Sariay',
+		admin: 'Sariay',
+		distractionFreeMode: 'true',
+	})
+	gitalk.render('gitalk-container');
+</script>
+		
+	
+
+</div>
+
+<script type="text/javascript">
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+		
+		//var obutton = $('#annie-comment-button');
+		//var obutton = $('#annie-comment-container');
+		var obutton = document.getElementById("annie-comment-button" || "0");
+		var odiv = document.getElementById("annie-comment-container");
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
+		}
+	};
+
+	(function Annie_Init() {
+		Annie_Comment();
+	})();
+</script>
+		
+		<!--
+	时间：2018-09-24
+	描述：The TOC module refers to 'https://github.com/codefine/hexo-theme-mellow', include toc.ejs、toc.js、toc.css. All rights reserved by codefine. 
+-->
+
+	
+		<aside class="post-widget">
+			<nav class="post-toc-wrap" id="post-toc">
+				
+					<strong>文章目录</strong>
+				
+				
+				<!--toc(post.content)-->
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装步骤"><span class="post-toc-text">安装步骤</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用说明"><span class="post-toc-text">使用说明</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件位置"><span class="post-toc-text">文件位置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他说明"><span class="post-toc-text">其他说明</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ShadowsocksR目前支持的协议和混淆："><span class="post-toc-text">ShadowsocksR目前支持的协议和混淆：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何转移用户数据信息？"><span class="post-toc-text">如何转移用户数据信息？</span></a></li></ol></li></ol>
+			</nav>
+			<div class="post-toc-bar"><div>
+		</aside>
+	
 
 	</div>
-	<footer>
+</div>
+		</div>
+		</main>
+		
+		<!--footer-->
+		<footer>
 	<div class="blog-text-center">
-		<div class="social">
+		<div class="theme-annie-social">
 				
 				
 					<a href="https://github.com/F7ionsy" title="Github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
@@ -211,14 +386,14 @@
 					<a href="http://wpa.qq.com/msgrd?v=3&uin=1223981419&site=qq&menu=yes" title="QQ" target="_blank"><i class="fa fa-qq"></i>&nbsp;</a>
 					
 				
-					<a href="http://github.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a>
+					<a href="http://twitter.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a>
 						
 				
 		</div>
 	</div>
 
 	<div  class="blog-text-center">
-		<div class="copyright">
+		<div class="theme-annie-copyright">
 			
 				&copy; 2017 - 2018, content by F7ionsy. All Rights Reserved.			       	
 			
@@ -226,46 +401,50 @@
 	</div>
 
 	<div class="blog-text-center">
-		<div class="copyright">
-			 本博客由Hexo强力驱动.		
+		<div class="theme-annie-copyright">
+			本博客由Hexo强力驱动	
 		</div>
 	</div>
 </footer>
+		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
 
-
-
-
-
-
-	</main>
-
-	
-<script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-
-<script>window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')</script>
-
-<script src="/js/main.js"></script> 
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
 
 <style>
 	.motto {
 		color: #000000;
 		font-size: 20px;
-		margin: 60px 20px 0 20px;
+		margin: 100px 25% 0;
+		width: 50%;
 		line-height: 1.4;
-		font-family: 'Fang Song', 'Song', 'STSong', sans-serif;
+		font-family:"KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
 		text-align: center;
+	}
+	@media(max-width: 890px) {
+		.motto {	
+			margin: 100px 10% 0;
+			width: 80%;
+		}
+	}
+	@media(max-width: 890px) {
+		.motto {
+			margin: 100px 5% 0;
+			width: 90%;
+		}
 	}
 </style>
 
 
 	<script src="/js/motto.js"></script>
-	<script>
+	<script type="text/javascript">
 		$(".motto").html(getMingYanContent());
 	</script>	
 
 
 
-    <div class="popup search-popup local-search-popup">
+	<div class="popup search-popup local-search-popup">
     <span class="popup-btn-close">
       ESC
     </span>
@@ -603,5 +782,53 @@
 
 
 
-</body>
-</html>
+
+	<script type="text/javascript" src="/js/toc.js"></script>
+
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript">
+	//generate a random img that pre_name 'from 0 to 110'
+	var random_bg = Math.floor(Math.random() * 109 + 1);
+
+	//var bg = 'url(/img/random/' + random_bg + '.jpg)';		
+	var bg = 'url(' + random_bg + '.jpg)';
+
+	$("#header-bg-2").css("background-image", bg);
+</script>
+		
+		<!--back to top-->
+        <style type="text/css">
+	#totop {
+		background: white;
+		border-radius: 50%;
+		position: fixed;
+		right: 5.4%;
+		bottom: 80px;
+		cursor: pointer;
+	}
+	
+	#totop a {
+		color: #474747;
+		background-color: transparent;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	@media(max-width:512px) {
+		#totop {
+			display: none;
+			visibility: hidden;
+		}
+	}
+</style>
+
+
+	<div id="totop">
+  		<a href="javascript:;" class="fa fa-arrow-up"></a>
+	</div>
+
+	</body>
+	</html>
+
