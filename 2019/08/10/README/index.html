@@ -19,7 +19,7 @@
 
     <!-- Title -->
     
-    <title>归档：2019 | F7ionsy&#39;s blog</title>
+    <title>F7ionsy&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -48,8 +48,7 @@
 <body>
 
     <!-- Content -->
-    
-
+    <section class="article-container">
 <!-- Back Home -->
 <a class="nav-back" href="/">
     <i class="fa fa-arrow-left"></i>
@@ -60,82 +59,76 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2019</h1>
+                <div class="post-heading">
+                    <h1>F7ionsy</h1>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview archive">
-    <a href="/2019/08/10/README/">
-        <h1 class="post-title archive">
-            F7ionsy
-        </h1>
-    </a>
-</div>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Main Content -->
+            <div class="post-content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="posts"><a href="#posts" class="headerlink" title="_posts"></a>_posts</h1><p> hexo 文章备份</p>
+
  
-            
-                <div class="post-preview archive">
-    <a href="/2019/08/10/关于想念/">
-        <h1 class="post-title archive">
-            关于想念
-        </h1>
-    </a>
-</div>
- 
-            
-                <div class="post-preview archive">
-    <a href="/2019/08/04/所謂掃黃/">
-        <h1 class="post-title archive">
-            所謂掃黃
-        </h1>
-    </a>
-</div>
- 
-            
-                <div class="post-preview archive">
-    <a href="/2019/08/02/一件轶事/">
-        <h1 class="post-title archive">
-            壹件軼事
-        </h1>
-    </a>
-</div>
- 
-            
-                <div class="post-preview archive">
-    <a href="/2019/08/02/一些图/">
-        <h1 class="post-title archive">
-            一些图
-        </h1>
-    </a>
-</div>
- 
-            
-                <div class="post-preview archive">
-    <a href="/2019/08/01/爱与死/">
-        <h1 class="post-title archive">
-            愛與死
-        </h1>
-    </a>
-</div>
- 
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pagiantion">
-    
-    
-</ul>
+                <!-- Meta -->
+                <div class="post-meta">
+                    <hr>
+                    <br>
+                    <div class="post-tags">
+                        
+                    </div>
+                    <div class="post-date">
+                        2019 年 08 月 10 日
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Disqus Comments -->
+
+
+            </div>
         </div>
     </div>
-</div>
+</article>
+</section>
 
+<!-- Image viewer-->
+
+    <!-- Custom picture view-->
+    <link href="/css/viewer.min.css" rel="stylesheet" />
+    <script
+      src="/js/viewer.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    
+    <script type="text/javascript">
+      // set image viewer
+      Viewer.setDefaults({
+        zoomRatio: [0.5],
+        navbar: false,
+        toolbar: false,
+        button: false,
+        title: [2, (image, imageData) => `${image.alt}`],
+        show: function() {
+          this.viewer.zoomTo(0.5);
+        }
+      });
+      var imageList = document.getElementsByTagName("img");
+      Array.prototype.forEach.call(imageList, element => {
+        var viewer = new Viewer(element);
+      });
+    </script>
+
+    
     <!-- Scripts -->
     <script type="text/javascript">
     console.log("© F7ionsy 🙋 2018-" + new Date().getFullYear());
